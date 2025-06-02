@@ -9,7 +9,7 @@ export default function ContactPage() {
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h1>
-          <p className="text-xl text-gray-600">Let's connect and discuss opportunities in STEM education and technology</p>
+          <p className="text-xl text-gray-600">Let us connect and discuss opportunities in STEM education and technology</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">

@@ -18,7 +18,7 @@ export default function AboutPage() {
               where I developed a strong foundation in scientific thinking and problem-solving.
             </p>
             <p className="text-gray-600 mb-4">
-              Now pursuing STEM Teaching at Marquette University, I'm passionate about 
+              Now pursuing STEM Teaching at Marquette University, I am passionate about 
               making science and technology accessible to the next generation of learners.
             </p>
             <p className="text-gray-600">
