@@ -3,60 +3,63 @@ import { Card } from '@/components/ui/card'
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
-      <div className="max-w-4xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">About Me</h1>
-          <p className="text-xl text-gray-600">From Biology to Code: My Journey in STEM Education</p>
-        </div>
+    <div className="min-h-screen bg-gray-50 py-20 px-4">
+      <div className="max-w-5xl mx-auto">
+        <header className="text-center mb-16">
+          <h1 className="text-5xl font-extrabold text-gray-900 mb-4">About Me</h1>
+          <p className="text-lg text-gray-600">
+            Bridging the worlds of science and software to reimagine STEM education.
+          </p>
+        </header>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card className="p-6">
-            <h2 className="text-2xl font-bold mb-4">My Story</h2>
-            <p className="text-gray-600 mb-4">
-              I started my academic journey studying Biology at The University of Alabama, 
-              where I developed a strong foundation in scientific thinking and problem-solving.
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <Card className="p-6 md:p-8 bg-white shadow">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">My Journey</h2>
+            <p className="text-gray-700 mb-4">
+              My academic roots are in Biology from The University of Alabama, where I developed a passion for analytical thinking and systems-driven exploration.
             </p>
-            <p className="text-gray-600 mb-4">
-              Now pursuing STEM Teaching at Marquette University, I am passionate about 
-              making science and technology accessible to the next generation of learners.
+            <p className="text-gray-700 mb-4">
+              At Marquette University, I now study STEM Teaching with the goal of reshaping how students interact with science, technology, and problem-solving.
             </p>
-            <p className="text-gray-600">
-              My transition into web development represents the perfect blend of my 
-              scientific background and my passion for educational technology.
+            <p className="text-gray-700">
+              Through web development and educational tools, I’m building interactive learning experiences that make complex STEM concepts both accessible and exciting.
             </p>
           </Card>
 
-          <Card className="p-6">
-            <h2 className="text-2xl font-bold mb-4">Technical Skills</h2>
-            <div className="space-y-4">
+          <Card className="p-6 md:p-8 bg-white shadow">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Tech Stack</h2>
+            <div className="space-y-5">
               <div>
-                <h3 className="font-semibold mb-2">Frontend</h3>
+                <h3 className="text-sm font-semibold text-gray-600 mb-2">Frontend</h3>
                 <div className="flex flex-wrap gap-2">
-                  {['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'HTML5', 'CSS3'].map((skill) => (
+                  {['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'HTML5', 'CSS3'].map(skill => (
                     <Badge key={skill} variant="secondary">{skill}</Badge>
                   ))}
                 </div>
               </div>
               <div>
-                <h3 className="font-semibold mb-2">Backend</h3>
+                <h3 className="text-sm font-semibold text-gray-600 mb-2">Backend</h3>
                 <div className="flex flex-wrap gap-2">
-                  {['Python', 'Django', 'Node.js', 'PostgreSQL', 'API Design'].map((skill) => (
+                  {['Python', 'Django', 'Node.js', 'PostgreSQL', 'API Design'].map(skill => (
                     <Badge key={skill} variant="secondary">{skill}</Badge>
                   ))}
                 </div>
               </div>
               <div>
-                <h3 className="font-semibold mb-2">Tools & Deployment</h3>
+                <h3 className="text-sm font-semibold text-gray-600 mb-2">Tools & Deployment</h3>
                 <div className="flex flex-wrap gap-2">
-                  {['Git', 'GitHub', 'Railway', 'Vercel', 'VS Code'].map((skill) => (
+                  {['Git', 'GitHub', 'Railway', 'Vercel', 'VS Code'].map(skill => (
                     <Badge key={skill} variant="secondary">{skill}</Badge>
                   ))}
                 </div>
               </div>
             </div>
           </Card>
-        </div>
+        </section>
+
+        <footer className="mt-16 text-center text-sm text-gray-500">
+          Driven by curiosity, grounded in science, and building the future of education — one line of code at a time.
+        </footer>
       </div>
     </div>
   )
