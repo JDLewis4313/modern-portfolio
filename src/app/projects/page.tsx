@@ -1,75 +1,42 @@
-import { Card } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
+import ProjectCard, { Project } from '@/components/ProjectCard'
+import CSProjects from '@/components/CSProjects'
+
+const featuredProjects: Project[] = [
+  {
+    title: "UnityForge",
+    description: " Modular Bible and Prayer application designed for spiritual growth and community engagement. Includes worship music by integrating Spotify and YouTube APIs.",
+    tech: ["Flask", "Redis", "RQ", "Supabase", "Spotify API", "YouTube API"],
+    github: "https://github.com/JDLewis4313/unityforge",
+    live: "https://unityforge-app-name-54af197c722a.herokuapp.com/"
+  },
+  {
+    title: "GeNiUS EdTech",
+    description: "Community-driven learning platform with Django backend and dynamic content modules. Built for scalable digital education.",
+    tech: ["Django", "PostgreSQL", "HTML/CSS", "JavaScript"],
+    github: "https://github.com/JDLewis4313/genius_edtech",
+    live: "https://geniusedtech-production.up.railway.app/"
+  },
+  {
+    title: "Modern Portfolio",
+    description: "Personal portfolio built with Next.js and Tailwind CSS. It is this current site, used to showcases my full-stack range and deployment skills.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    github: "https://github.com/JDLewis4313/modern-portfolio",
+    live: "https://modern-portfolio-fawn.vercel.app/"
+  }
+]
 
 export default function ProjectsPage() {
-  const projects = [
-    {
-      title: "Django Portfolio Website",
-      description: "Full-stack portfolio built with Django and PostgreSQL, featuring admin interface and Railway deployment.",
-      tech: ["Django", "Python", "PostgreSQL", "Railway", "Bootstrap"],
-      github: "https://github.com/JDLewis4313/portfolio-website",
-      demo: "https://jermarcus-lewis-portfolio.up.railway.app",
-      status: "Live"
-    },
-    {
-      title: "Modern Next.js Portfolio",
-      description: "This website! Built with Next.js 14, TypeScript, and Tailwind CSS for modern web development.",
-      tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-      github: "#",
-      demo: "#",
-      status: "In Progress"
-    },
-    {
-      title: "COSC 6500 Projects",
-      description: "Academic projects from Foundations of Computing course, showcasing Python programming fundamentals.",
-      tech: ["Python", "Data Structures", "Algorithms"],
-      github: "#",
-      demo: "#",
-      status: "Academic"
-    }
-  ]
-
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">My Projects</h1>
-          <p className="text-xl text-gray-600">Building solutions that bridge education and technology</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-              <div className="mb-4">
-                <Badge variant={project.status === 'Live' ? 'default' : 'secondary'}>
-                  {project.status}
-                </Badge>
-              </div>
-              <h3 className="text-xl font-bold mb-3">{project.title}</h3>
-              <p className="text-gray-600 mb-4">{project.description}</p>
-              
-              <div className="flex flex-wrap gap-2 mb-6">
-                {project.tech.map((tech) => (
-                  <Badge key={tech} variant="outline" className="text-xs">
-                    {tech}
-                  </Badge>
-                ))}
-              </div>
-
-              <div className="flex gap-2">
-                <Button size="sm" variant="outline" asChild>
-                  <Link href={project.github}>GitHub</Link>
-                </Button>
-                <Button size="sm" asChild>
-                  <Link href={project.demo}>View Live</Link>
-                </Button>
-              </div>
-            </Card>
-          ))}
-        </div>
+    <div className="max-w-6xl mx-auto px-4 py-16">
+      <h2 className="text-3xl font-bold mb-8">Featured Projects</h2>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {featuredProjects.map((project) => (
+          <ProjectCard key={project.title} project={project} />
+        ))}
       </div>
+
+      <h2 className="text-3xl font-bold mb-8">Web Development Projects</h2>
+      <CSProjects />
     </div>
   )
 }
