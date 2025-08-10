@@ -10,7 +10,7 @@ export default function ContactPage() {
         <header className="text-center mb-16">
           <h1 className="text-5xl font-extrabold text-gray-900 mb-4">Get In Touch</h1>
           <p className="text-lg text-gray-600">
-            Whether it’s feedback, collaboration, or curiosity — I’d love to hear from you.
+            Whether it&apos;s feedback, collaboration, or curiosity — I&apos;d love to hear from you.
           </p>
         </header>
 
@@ -57,9 +57,11 @@ export default function ContactPage() {
           </Card>
         </section>
 
-        <footer className="mt-16 text-center text-sm text-gray-500">
-          Built with care and curiosity. Let's shape STEM learning together.
-        </footer>
+      <footer className="mt-16 text-center text-sm text-gray-500">
+        Built with care and curiosity. Let&apos;s shape STEM learning together.
+      </footer>
+
+
       </div>
     </div>
   )

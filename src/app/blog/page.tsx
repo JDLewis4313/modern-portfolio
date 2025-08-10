@@ -6,7 +6,7 @@ export default function BlogPage() {
   const posts = [
     {
       title: "From Biology to Code: My Journey Setting Up My First Django Project",
-      excerpt: "Learning to program can feel overwhelming, especially when you're staring at the endless list of programming languages...",
+      excerpt: "Learning to program can feel overwhelming, especially when you&apos;re staring at the endless list of programming languages...",
       category: "Learning",
       readTime: "8 min read",
       date: "June 2, 2025",
