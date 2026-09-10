@@ -4,21 +4,22 @@ import CSProjects from '@/components/CSProjects'
 const featuredProjects: Project[] = [
   {
     title: "UnityForge",
-    description: " Modular Bible and Prayer application designed for spiritual growth and community engagement. Includes worship music by integrating Spotify and YouTube APIs.",
-    tech: ["Flask", "Redis", "RQ", "Supabase", "Spotify API", "YouTube API"],
+    description: "Modular Bible and prayer app designed for spiritual growth and community, with worship-music playback via the Spotify and YouTube APIs and background audio processing.",
+    tech: ["Flask", "PostgreSQL", "Redis", "RQ", "Spotify API", "YouTube API"],
     github: "https://github.com/JDLewis4313/unityforge",
-    live: "https://unityforge-app-name-54af197c722a.herokuapp.com/"
+    // live: add the Railway URL once the deploy is green
+    // live: "https://web-production-70989.up.railway.app"
   },
   {
     title: "GeNiUS EdTech",
-    description: "Community-driven learning platform with Django backend and dynamic content modules. Built for scalable digital education.",
-    tech: ["Django", "PostgreSQL", "HTML/CSS", "JavaScript"],
+    description: "Community-driven learning platform with a Django backend and dynamic content modules. Built for scalable digital education.",
+    tech: ["Django", "PostgreSQL", "Railway", "JavaScript"],
     github: "https://github.com/JDLewis4313/genius_edtech",
     live: "https://geniusedtech-production.up.railway.app/"
   },
   {
     title: "Modern Portfolio",
-    description: "Personal portfolio built with Next.js and Tailwind CSS. It is this current site, used to showcases my full-stack range and deployment skills.",
+    description: "This site — a personal portfolio built with Next.js and Tailwind CSS, showcasing my full-stack range across software, sound, and STEM.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     github: "https://github.com/JDLewis4313/modern-portfolio",
     live: "https://modern-portfolio-fawn.vercel.app/"
